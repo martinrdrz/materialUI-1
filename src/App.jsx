@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@emotion/react';
-import { CssBaseline } from '@mui/material';
+import { Card, CssBaseline } from '@mui/material';
 import { ButtonExample } from './components/ButtonExample';
 import { ContainerExample } from './components/ContainerExample';
 import { TypographyExample } from './components/TypographyExample';
@@ -9,13 +9,14 @@ import { greenTheme } from './components/greenTheme';
 import { BoxExampleUno } from './components/BoxExampleUno';
 import { ButtonIcons } from './components/ButtonIcons';
 import { CardManual } from './components/CardManual';
+import { CardComp } from './components/CardComp';
 
 export const App = () => {
     return (
         <>
             <ThemeProvider theme={greenTheme}>
                 <CssBaseline />
-                <CardManual />
+                <CardComp />
             </ThemeProvider>
         </>
     );
