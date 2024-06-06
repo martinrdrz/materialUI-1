@@ -10,13 +10,18 @@ import { BoxExampleUno } from './components/BoxExampleUno';
 import { ButtonIcons } from './components/ButtonIcons';
 import { CardManual } from './components/CardManual';
 import { CardComp } from './components/CardComp';
+import { AlertMessage } from './components/AlertMessage';
+import { SnackbarProvider } from 'notistack';
+import { TextFieldExample } from './components/TextFieldExample';
 
 export const App = () => {
     return (
         <>
             <ThemeProvider theme={greenTheme}>
-                <CssBaseline />
-                <CardComp />
+                <SnackbarProvider maxSnack={5} autoHideDuration={3000}>
+                    <CssBaseline />
+                    <TextFieldExample />
+                </SnackbarProvider>
             </ThemeProvider>
         </>
     );
